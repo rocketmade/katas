@@ -1,0 +1,15 @@
+Write a function which determines the winner of two hands of poker.
+
+ex: winner("2c 2d 3h 5s 6h", "5c 5h ks kh as") # => "5c 5h ks kh as"
+
+For refrence, the winning hands in descending order are:
+
+Straight Flush
+Four of a kind
+Full house
+Flush
+Straight
+Three of a kind
+Two pair
+One pair
+High Card

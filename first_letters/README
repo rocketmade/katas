@@ -1,0 +1,3 @@
+Write a function that takes a string and returns the first letter seperated into groups by punctuation.
+
+ex. "The quick brown fox jumps over the lazy dog, but the dog totally deserved it." # => "Tqbfjotld btdtdi "

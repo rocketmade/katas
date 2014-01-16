@@ -1,0 +1,3 @@
+Write a function that given a body of text and an integer line length replaces the last space that fits in the line with a newline
+
+ex. "The quick brown fox jumps over the lazy dog, but the dog totally deserved it.", 40 # => "The quick brown fox jumps over the lazy\ndog, but the dog totally deserved it."
