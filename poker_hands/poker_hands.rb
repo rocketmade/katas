@@ -1,7 +1,7 @@
 require 'pp'
 
 CARD_ORDER = %w(1 2 3 4 5 6 7 8 9 10 j q k a)
-HAND_ORDER = %i(straight_flush four_kind full_house flush straight three_kind two_pair pair high_card)
+HAND_ORDER = %i(high_card pair two_pair three_kind straight flush full_house four_kind straight_flush)
 class Card < Struct.new(:str, :suit, :value, :value_rank)
   def initialize card
     self.str = card
@@ -29,7 +29,7 @@ class Hand < Struct.new(:str, :cards)
 
   def <=> other
     result = if best_hand != other.best_hand
-               HAND_ORDER.index(other.best_hand) <=> HAND_ORDER.index(best_hand) # reversed since the hand order list is in descending order
+               HAND_ORDER.index(best_hand) <=> HAND_ORDER.index(other.best_hand)
              elsif %i(four_kind three_kind).include? best_hand
                public_send(best_hand).first.first <=> other.public_send(best_hand).first.first
              elsif best_hand == :pair
@@ -51,7 +51,7 @@ class Hand < Struct.new(:str, :cards)
   end
 
   def best_hand
-    @best_hand ||= HAND_ORDER.find do |type|
+    @best_hand ||= HAND_ORDER.reverse.find do |type|
       send("#{type}?".to_sym)
     end
   end
