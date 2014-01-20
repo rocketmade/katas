@@ -41,10 +41,10 @@ int goodFib(int n)
 		return 0;
 	}
 
-	int *memo = (int *)malloc(n*sizeof(int));
+	int *memo = (int *)malloc((n+1)*sizeof(int));
 
 	//we can acomplish the same thing in c++ with the new operator
-	//int *memo = new int[n];
+	//int *memo = new int[n+1];
 
 	memo[0] = 0; memo[1] = 1;
 
