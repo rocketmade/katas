@@ -10,7 +10,7 @@ module Cells
 
   class DeadClass
     include Singleton
-    def to_s; "-"; end
+    def to_s; " "; end
     def alive?; false; end
     def dead?; true; end
   end
