@@ -1,0 +1,6 @@
+Write a function that accepts an integer N and returns the total number of unique squares within the initial NxN square.
+
+unique_squares(1) = 1
+unique_squares(2) = 5
+unique_squares(3) = 14
+unique_squares(4) = 30
